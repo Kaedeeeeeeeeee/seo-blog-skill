@@ -1,0 +1,43 @@
+{
+  "site": {
+    "url": "https://it-passport-steel.vercel.app",
+    "contentDir": "content/blog",
+    "locales": ["ja", "zh", "en"],
+    "defaultLocale": "ja"
+  },
+  "output": {
+    "format": "mdx",
+    "frontmatterFields": {
+      "required": ["title", "description", "date", "tags"],
+      "optional": ["cover", "status"],
+      "stripOnPublish": ["status"]
+    }
+  },
+  "llm": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-flash",
+    "apiKeyEnv": "DEEPSEEK_API_KEY",
+    "temperature": 0.3
+  },
+  "style": {
+    "guidePath": "./style-guide.md",
+    "language": "Japanese (keigo, です/ます調)",
+    "tone": "polite, exam-prep, information-dense",
+    "forbiddenPhrases": [
+      "いかがでしたか",
+      "本記事では",
+      "最後までお読みいただきありがとうございました",
+      "まとめると、",
+      "について解説しました"
+    ],
+    "targetLength": [800, 1400]
+  },
+  "templates": {
+    "default": "glossary",
+    "available": ["glossary", "comparison", "persona", "data-driven", "howto"]
+  },
+  "safety": {
+    "warnAt": 100,
+    "hardStopAt": 500
+  }
+}

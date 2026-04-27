@@ -1,0 +1,34 @@
+{
+  "name": "seo-blog-skill",
+  "version": "0.1.0",
+  "description": "Outline-driven multilingual blog generator skill for Claude Code. Author provides facts, skill automates production.",
+  "type": "module",
+  "bin": {
+    "seo-blog": "./scripts/cli.mjs"
+  },
+  "scripts": {
+    "smoke": "node scripts/selftest/smoke.mjs",
+    "unit": "node scripts/selftest/unit.mjs",
+    "regression": "node scripts/selftest/regression.mjs",
+    "test": "npm run smoke && npm run unit"
+  },
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kaedeeeeeeeeee/seo-blog-skill.git"
+  },
+  "keywords": [
+    "claude-code",
+    "agent-skill",
+    "seo",
+    "blog",
+    "programmatic-seo",
+    "content-generation"
+  ]
+}
